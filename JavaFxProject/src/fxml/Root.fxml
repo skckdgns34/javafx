@@ -11,7 +11,7 @@
 		<!-- <Insets topRightBottmLeft = "10.0"/> -->
 		<Insets top="10.0" right="10.0" bottom="10.0" left="10.0" />
 	</padding>
-	<spacing>50</spacing>
+	<spacing>10</spacing>
 	<children>
 		<TextField prefWidth = "200"/>
 		<Button text = "확인"/>

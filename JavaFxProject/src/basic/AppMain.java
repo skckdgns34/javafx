@@ -18,10 +18,6 @@ public class AppMain extends Application{
 		System.out.println(Thread.currentThread().getName() + ": AppMain()실행"); //실행되고있는 현재 스레드
 	}
 	
-	@Override
-	public void init() throws Exception {
-		System.out.println(Thread.currentThread().getName() + ": init() 실행");
-	}
 	
 	@Override
 	public void start(Stage primaryStage) throws Exception {
@@ -49,6 +45,10 @@ public class AppMain extends Application{
 		Scene scene = new Scene(root);
 		primaryStage.setScene(scene);
 		primaryStage.show();
+	}
+	@Override
+	public void init() throws Exception {
+		System.out.println(Thread.currentThread().getName() + ": init() 실행");
 	}
 	
 	@Override
