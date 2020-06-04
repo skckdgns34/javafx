@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8"
+			prefHeight="150" prefWidth="420" fx:controller="button.ButtonController">
+   <padding>
+      <Insets topRightBottomLeft="10.0" />
+   </padding>
+   <center>
+      <HBox fx:id="Hbox" prefHeight="100.0" prefWidth="400.0" spacing="10.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="100.0" spacing="20.0">
+               <children>
+                  <CheckBox fx:id="chk1" text="안경" onAction="#handleCheckAction"/>
+                  <CheckBox fx:id="chk2" text="모자"/>
+               </children>
+            </VBox>
+            <ImageView fx:id="imageView" fitWidth="100.0"  preserveRatio="true">
+               <image>
+                  <Image url="@../images/geek.gif" />
+               </image>
+            </ImageView>
+            
+            <Separator orientation="VERTICAL" prefHeight="100.0" />
+            
+            <VBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="150.0" spacing="20.0">
+               <children>
+                  <fx:define>
+                  	<ToggleGroup fx:id = "group"/>
+                  </fx:define>
+                  <RadioButton toggleGroup="$group" userData="BubbleChart" fx:id="rad1" text="BubbleChart" selected="true"/>
+                  <RadioButton toggleGroup="$group" userData="BarChart" fx:id="rad2" text="BarChart" />
+                  <RadioButton toggleGroup="$group" userData="AreaChart" fx:id="rad3" text="AreaChart" />
+               </children>
+            </VBox>
+            <ImageView fx:id="imageView2" fitWidth="100.0"  preserveRatio="true">
+               <image>
+                  <Image url="@../images/BubbleChart.png" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
+   </center>
+   <bottom>
+      <Button fx:id="exitBtn" text="Button" BorderPane.alignment="CENTER" />
+   </bottom>
+</BorderPane>

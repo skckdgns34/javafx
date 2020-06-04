@@ -6,14 +6,14 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.Button?>
 
-<HBox xmlns:fx="http://javafx.com/fxml/1">
+<HBox xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxml.RootController">
 	<padding>
 		<!-- <Insets topRightBottmLeft = "10.0"/> -->
 		<Insets top="10.0" right="10.0" bottom="10.0" left="10.0" />
 	</padding>
 	<spacing>10</spacing>
 	<children>
-		<TextField prefWidth = "200"/>
-		<Button text = "확인"/>
+		<TextField fx:id="textField" prefWidth = "200"/>
+		<Button fx:id="btnOk" text = "확인"/>
 	</children>
 </HBox>
