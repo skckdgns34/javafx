@@ -13,6 +13,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TableView.TableViewFocusModel;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -58,7 +59,7 @@ public class ViewController implements Initializable{
 
 			@Override
 			public void changed(ObservableValue<? extends Phone> observable, Phone oldValue, Phone newValue) {
-				imageView.setImage(new Image("/images/"+newValue.getImage()));				
+				imageView.setImage(new Image("/images/"+newValue.getImage()));	
 			}
 		});
 	}
